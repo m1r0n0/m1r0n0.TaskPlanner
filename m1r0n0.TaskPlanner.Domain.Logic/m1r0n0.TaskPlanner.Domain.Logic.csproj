@@ -1,14 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\m1r0n0.TaskPlanner.Domain.Logic\m1r0n0.TaskPlanner.Domain.Logic.csproj" />
     <ProjectReference Include="..\m1r0n0.TaskPlanner.Domain.Models\m1r0n0.TaskPlanner.Domain.Models.csproj" />
   </ItemGroup>
 
