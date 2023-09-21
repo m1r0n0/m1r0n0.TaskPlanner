@@ -9,15 +9,25 @@ namespace m1r0n0.TaskPlanner.Domain.Logic
 {
     public class SimpleTaskPlanner
     {
+        private int SortMethod { get; set; }
+        public SimpleTaskPlanner(int sort_method) 
+        {
+            SortMethod = sort_method;
+        }
 
         public WorkItem[] CreatePlan(WorkItem[] items)
         {
             var itemsAsList = items.ToList();
 
-            itemsAsList.Sort(CompareWorkItemsByPriority);
-            itemsAsList.Sort(CompareWorkItemsByDueDate);
-            itemsAsList.Sort(CompareWorkItemsByTitle);
-
+            switch (SortMethod){
+                case 1: itemsAsList.Sort(CompareWorkItemsByTitle);
+                    break;
+                case 2: itemsAsList.Sort(CompareWorkItemsByDueDate);
+                    break;
+                case 3: itemsAsList.Sort(CompareWorkItemsByPriority);
+                    break;
+            }
+                                  
             return itemsAsList.ToArray();
         }
 
