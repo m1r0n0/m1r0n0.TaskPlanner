@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\m1r0n0.TaskPlanner.DataAccess.Abstractions\m1r0n0.TaskPlanner.DataAccess.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
